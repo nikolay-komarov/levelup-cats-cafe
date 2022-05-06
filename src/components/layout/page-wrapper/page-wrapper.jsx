@@ -4,12 +4,12 @@ import { Footer } from "../footer/footer";
 import { Header } from "../header/header";
 import "./styles.css";
 
-export const PageWrapper = () => {
+export const PageWrapper = ({ ...props }) => {
   return (
     <>
       <Header />
       <main className="page-wrapper__main">
-        <MainPage />
+        <MainPage {...props} />
       </main>
       <Footer />
     </>
