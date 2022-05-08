@@ -1,10 +1,14 @@
 import React from "react";
-import "./styles.css";
+import { StyledButton } from "./styled";
 
-export const Button = ({ minWidth, children }) => {
+export const Button = ({ link, className, minWidth, children }) => {
   return (
-    <button type="button" style={{ minWidth: minWidth }} className="button">
+    <StyledButton
+      minWidth={minWidth}
+      {...(link ? { href: link } : { as: "button", type: "button" })}
+      className={className}
+    >
       {children}
-    </button>
+    </StyledButton>
   );
 };

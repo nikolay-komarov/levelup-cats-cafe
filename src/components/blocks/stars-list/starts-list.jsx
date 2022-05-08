@@ -19,7 +19,9 @@ export const StarsList = ({ stars }) => {
           </ul>
         </>
       )}
-      <Button minWidth={353}>Купить билет</Button>
+      <Button minWidth={353} link="/buy">
+        Купить билет
+      </Button>
     </section>
   );
 };
