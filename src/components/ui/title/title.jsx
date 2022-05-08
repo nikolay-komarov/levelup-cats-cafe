@@ -1,12 +1,10 @@
 import React from "react";
-import "./styles.css";
+import { StyledTitle } from "./styled";
 
-export const TITLE_SIZE = {
-  BIG: "big",
-  SMALL: "small",
-  DEFAULT: ""
-};
-
-export const Title = ({ size, children }) => {
-  return <h1 className={`title${size ? ` title_${size}` : ""}`}>{children}</h1>;
+export const Title = ({ level = 1, size, className, children }) => {
+  return (
+    <StyledTitle as={`h${level}`} size={size} className={className}>
+      {children}
+    </StyledTitle>
+  );
 };

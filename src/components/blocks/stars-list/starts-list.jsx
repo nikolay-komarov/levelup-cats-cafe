@@ -4,12 +4,12 @@ import { StarCard } from "../../ui/star-card/star-card";
 import { Button } from "../../ui/button/button";
 import "./styles.css";
 
-export const StarsList = ({ stars }) => {
+export const StarsList = ({ stars, titleLevel }) => {
   return (
     <section className="star-list">
       {stars?.length && (
         <>
-          <Title>Наши звёзды</Title>
+          <Title level={titleLevel}>Наши звёзды</Title>
           <ul className="star-list__list">
             {stars.map((star) => (
               <li key={star.id} className="star-list__item">

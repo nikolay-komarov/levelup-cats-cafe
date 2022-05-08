@@ -1,5 +1,6 @@
 import React from "react";
-import { Title, TITLE_SIZE } from "../../ui/title/title";
+import { Title } from "../../ui/title/title";
+import { TITLE_SIZE } from "../../ui/title/consts";
 import "./styles.css";
 
 export const About = () => {
