@@ -2,26 +2,26 @@ import React from "react";
 import { Title } from "../../ui/title/title";
 import { StarCard } from "../../ui/star-card/star-card";
 import { Button } from "../../ui/button/button";
-import "./styles.css";
+import { StarItem, StarList, StyledStarsList } from "./styled";
 
 export const StarsList = ({ stars, titleLevel }) => {
   return (
-    <section className="star-list">
+    <StyledStarsList>
       {stars?.length && (
         <>
           <Title level={titleLevel}>Наши звёзды</Title>
-          <ul className="star-list__list">
+          <StarList isGridList>
             {stars.map((star) => (
-              <li key={star.id} className="star-list__item">
+              <StarItem key={star.id}>
                 <StarCard {...star} />
-              </li>
+              </StarItem>
             ))}
-          </ul>
+          </StarList>
         </>
       )}
       <Button minWidth={353} link="/buy">
         Купить билет
       </Button>
-    </section>
+    </StyledStarsList>
   );
 };
