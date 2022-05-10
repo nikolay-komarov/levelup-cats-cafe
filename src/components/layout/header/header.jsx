@@ -1,13 +1,13 @@
 import React from "react";
 import { Logo } from "../../ui/logo/logo";
 import { Nav } from "../nav/nav";
-import "./styles.css";
+import { StyledHeader } from "./styled";
 
 export const Header = () => {
   return (
-    <header className="header">
+    <StyledHeader as="header">
       <Logo />
       <Nav />
-    </header>
+    </StyledHeader>
   );
 };

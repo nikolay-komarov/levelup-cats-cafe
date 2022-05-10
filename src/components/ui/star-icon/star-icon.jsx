@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.css";
+import { StyledStarIcon } from "./styled";
 
 export const CAT_FEATURE = {
   NEW: "new",
@@ -33,12 +33,9 @@ export const StarIcon = ({ className = "", feature }) => {
   return (
     <>
       {options.text && (
-        <span
-          className={`star-icon ${className}`}
-          style={{ backgroundColor: options.bgColor }}
-        >
+        <StyledStarIcon className={className} bgColor={options.bgColor}>
           {options.text}
-        </span>
+        </StyledStarIcon>
       )}
     </>
   );

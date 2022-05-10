@@ -1,12 +1,12 @@
 import React from "react";
 import { Logo } from "../../ui/logo/logo";
-import "./styles.css";
+import { StyledSection, Copyright } from "./styled";
 
 export const Footer = () => {
   return (
-    <footer className="footer">
+    <StyledSection>
       <Logo />
-      <span className="footer__copyright">Создано 2021</span>
-    </footer>
+      <Copyright>Создано 2022</Copyright>
+    </StyledSection>
   );
 };
